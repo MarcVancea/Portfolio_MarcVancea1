@@ -20,7 +20,7 @@
     width: 100%;
     padding: 1rem 0;
     z-index: 1000;
-    background: linear-gradient(135deg, #4a90e2, #6bb9f0); /* Cambiado a azul */
+    background: linear-gradient(135deg, #1e3a8a, #10b981); /* Tonos oscuros y verdes */
     background-size: 200% 200%;
     animation: gradientAnimation 5s ease infinite;
   }
@@ -59,7 +59,7 @@
     transition: color 0.3s;
   }
   nav ul li a:hover {
-    color: #4a90e2; /* Cambiado a azul */
+    color: #10b981; /* Verde */
   }
   
   /* Menú móvil */
@@ -127,7 +127,7 @@
   /* Botón interactivo */
   .btn {
     display: inline-block;
-    background: #6bb9f0; /* Cambiado a azul */
+    background: #10b981; /* Verde */
     color: #fff;
     padding: 0.75rem 1.5rem;
     border-radius: 50px;
@@ -136,7 +136,7 @@
     transition: background 0.3s, transform 0.3s;
   }
   .btn:hover {
-    background: #4a90e2; /* Cambiado a azul */
+    background: #1e3a8a; /* Azul oscuro */
     transform: translateY(-3px);
   }
   
@@ -149,7 +149,7 @@
   }
   .content h2 {
     margin-bottom: 1rem;
-    color: #4a90e2; /* Cambiado a azul */
+    color: #10b981; /* Verde */
   }
   
   /* Listados: Educación, Experiencia, Habilidades y Contacto */
@@ -167,7 +167,7 @@
     background: #f9f9f9;
     margin-bottom: 1rem;
     padding: 1rem;
-    border-left: 5px solid #6bb9f0; /* Cambiado a azul */
+    border-left: 5px solid #10b981; /* Verde */
     transition: transform 0.3s;
   }
   .education-list li:hover,
@@ -195,6 +195,7 @@
       right: 0;
       width: 200px;
       display: none;
+      background: #10b981; /* Verde */
     }
     
     nav ul li {
