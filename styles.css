@@ -1,0 +1,212 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo general */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header con animación de gradiente */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 1000;
+    background: linear-gradient(135deg, #4a90e2, #6bb9f0); /* Cambiado a azul */
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s ease infinite;
+  }
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  header .logo h1 {
+    font-size: 1.8rem;
+    color: #fff;
+  }
+  
+  /* Navegación */
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+  nav ul li {
+    margin-left: 1.5rem;
+  }
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  nav ul li a:hover {
+    color: #4a90e2; /* Cambiado a azul */
+  }
+  
+  /* Menú móvil */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.3s;
+  }
+  
+  /* Secciones */
+  .section {
+    padding: 100px 1rem 60px; /* compensamos el header fijo */
+    max-width: 1200px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  .section.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Sección de Inicio con fondo dinámico y efecto typewriter */
+  #inicio {
+    background: url('https://via.placeholder.com/1200x600') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    position: relative;
+  }
+  #inicio::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+  }
+  #inicio .intro {
+    position: relative;
+    z-index: 1;
+    padding: 100px 1rem;
+  }
+  #inicio h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    /* Efecto cursor para typewriter */
+    border-right: 2px solid rgba(255,255,255,0.75);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  #inicio p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Botón interactivo */
+  .btn {
+    display: inline-block;
+    background: #6bb9f0; /* Cambiado a azul */
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+  }
+  .btn:hover {
+    background: #4a90e2; /* Cambiado a azul */
+    transform: translateY(-3px);
+  }
+  
+  /* Contenido de secciones */
+  .content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  }
+  .content h2 {
+    margin-bottom: 1rem;
+    color: #4a90e2; /* Cambiado a azul */
+  }
+  
+  /* Listados: Educación, Experiencia, Habilidades y Contacto */
+  .education-list,
+  .experience-list,
+  .skills-list,
+  .contact-list {
+    list-style: none;
+    padding: 0;
+  }
+  .education-list li,
+  .experience-list li,
+  .skills-list li,
+  .contact-list li {
+    background: #f9f9f9;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-left: 5px solid #6bb9f0; /* Cambiado a azul */
+    transition: transform 0.3s;
+  }
+  .education-list li:hover,
+  .experience-list li:hover,
+  .skills-list li:hover,
+  .contact-list li:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    margin-top: 2rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      background: #6bb9f0; /* Cambiado a azul */
+      width: 200px;
+      display: none;
+    }
+    
+    nav ul li {
+      margin: 1rem 0;
+    }
+    
+    .menu-toggle {
+      display: flex;
+    }
+    
+    nav ul.active {
+      display: flex;
+    }
+  }
