@@ -92,7 +92,7 @@
   
   /* Sección de Inicio con fondo dinámico y efecto typewriter */
   #inicio {
-    background: url('https://via.placeholder.com/1200x600') no-repeat center center/cover;
+    background: linear-gradient(135deg, #1e3a8a, #10b981); /* Cambiado a un degradado atractivo */
     color: #fff;
     text-align: center;
     position: relative;
